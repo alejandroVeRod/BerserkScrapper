@@ -6,6 +6,7 @@ from urllib.request import urlopen
 import io
 import sys
 from PIL import Image
+from tqdm import tqdm 
 
 BASE_URL = 'https://berserkonline.com'
 
@@ -34,7 +35,6 @@ def save_image(img_content,file_path):
         image = Image.open(image_file).convert('RGB')
         with open(file_path,'wb') as f:
             image.save(f,"JPEG",quality = 85)
-        print(f"SUCCESS- saved as {file_path}")
     except Exception as e:
         print(f"ERROR- Could not save - {e}")
 
@@ -46,7 +46,7 @@ def get_images(manga_links,save_path):
             os.mkdir(path)
         soup = get_url_soup(manga_links[i])
         img_links = soup.find_all("div",{"class": "separator"})
-        for j in range(0,len(img_links)):
+        for j in tqdm(range(0,len(img_links)), desc = "Downloading chapter: " + str(chapter_name)):
             #url = base + "{chapter_name}-{page_number}.jpg".format(chapter_name = chapter_name, page_number = j)
             url = img_links[j].next["href"]
             try:
