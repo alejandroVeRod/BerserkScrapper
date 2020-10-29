@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import os
-from urllib.request import urlretrieve
-from urllib.request import urlopen
 import io
 import sys
 from PIL import Image

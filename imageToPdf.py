@@ -1,5 +1,4 @@
 from PIL import Image
-import glob
 import os
 import sys
 import re
