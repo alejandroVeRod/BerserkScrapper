@@ -4,6 +4,8 @@ import os
 import sys
 import re
 
+
+
 def sorted_alphanumeric(data):
     convert = lambda text: int(text) if text.isdigit() else text.lower()
     alphanum_key = lambda key: [ convert(c) for c in re.split('([0-9]+)', key) ] 
@@ -37,16 +39,28 @@ def convert_images_to_pdf(path):
     pdf_path = os.path.join(path,chapter_name + ".pdf")
     try:
         images[0].save(pdf_path, save_all = True, append_images = images)
-        print(f'Saved pdf file {pdf_path}')
+        print(f'Saved pdf file {pdf_path}\n')
     except Exception as e:
-        print(f'ERROR Could not save {pdf_path} file {e}')
+        print(f'ERROR Could not save {pdf_path} file {e}\n')
 
 
 def main():
-    path = "F:\BERSERK"
-    chapter = sys.argv[1]
-    convert_images_to_pdf(os.path.join(path,chapter))
-    
+    EXIT = False
+    if len(sys.argv) >= 2:
+        for i in range(1,len(sys.argv)):
+            path = sys.argv[i]
+            convert_images_to_pdf(path)
+    else:
+        while(EXIT == False):
+            print("Insert a path with images to transform into a .pdf\nInsert 'q' to exit the program\n")
+            path = input()
+            if(path != 'q'):
+                if not os.path.exists(path):
+                    print(f"ERROR Insert a valid path\n")
+                else:
+                    convert_images_to_pdf(path)
+            else:
+                EXIT = True    
             
 if __name__ == "__main__":
     main()
