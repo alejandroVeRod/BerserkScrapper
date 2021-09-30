@@ -3,6 +3,15 @@ An easy home made scrapper for the berserk manga from berserkonline.com. I do no
 
 INSTRUCTIONS:
 
+WINDOWS
+--------
+Just execute the .exe file then a black window will appear asking for you to put the chapter number you want to read
+(from 1 to 364 the latest one), then because the chapter names in berserk are weird it will ask you to select
+the one you want, put again the number then wait for the download to finish and the pdf will be in the same path
+as the .exe file is!
+
+DEVELOPER
+---------
 -> Python is needed for the code to execute
 -> Make sure you got every library used in this project installed (BeautifulSoup, request, urllib, PILLOW,..)
 
