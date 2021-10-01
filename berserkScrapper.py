@@ -3,7 +3,6 @@ import json
 import requests
 import io
 from bs4 import BeautifulSoup
-from tqdm import tqdm 
 from PIL import Image
 from tqdm import tqdm 
 from genericpath import exists
