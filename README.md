@@ -10,8 +10,8 @@ as the .exe file is!
 
 DEVELOPER
 ---------
--> Python and pip is needed for the code to execute
--> >pip install -r requirements.txt
--> >python BerserkScrapper.py 
+-> Python and pip is needed for the code to execute\
+-> >pip install -r requirements.txt\
+-> >python BerserkScrapper.py\
 
 Feel free to change any of the code to your needs, this is only a tool i wanted to create for everyone :P
