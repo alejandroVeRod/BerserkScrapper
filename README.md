@@ -10,17 +10,8 @@ as the .exe file is!
 
 DEVELOPER
 ---------
--> Python is needed for the code to execute
--> Make sure you got every library used in this project installed (BeautifulSoup, request, urllib, PILLOW,..)
+-> Python and pip is needed for the code to execute
+-> >pip install -r requirements.txt
+-> >python BerserkScrapper.py 
 
-USAGE:
--> python3 BerserkScrapper.py 
-  Then it will ask you for any chapter number you want
-  You select the one from the list searched and then it just
-  downloads all images and converts them into a pdf, just as simple as that
-  
-NOTE:
-  -> It will generate a manga_links.json file, this is for performance purposes
-  if you wish to download more.
-you can modify it for any of your needs, I do not own this, its just that I wanted to read the manga in my mobile in pdf
-
+Feel free to change any of the code to your needs, this is only a tool i wanted to create for everyone :P
